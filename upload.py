@@ -54,7 +54,7 @@ class ParseGeoJsonFile(ABC):
         pass
 
     @abstractmethod
-    def getParserName() -> str:
+    def getParserName(self) -> str:
         pass
 
 class ParseCountryFile(ParseGeoJsonFile):
@@ -97,7 +97,7 @@ class ParseCountryFile(ParseGeoJsonFile):
         
         return True
     
-    def getParserName() -> str:
+    def getParserName(self) -> str:
         return 'Country Parser'
 
 class ParseEarthquakeFile(ParseGeoJsonFile):
@@ -172,7 +172,7 @@ class ParseEarthquakeFile(ParseGeoJsonFile):
         
         return True
     
-    def getParserName() -> str:
+    def getParserName(self) -> str:
         return 'Earthquake Parser'
 
 def main(args: Namespace):
